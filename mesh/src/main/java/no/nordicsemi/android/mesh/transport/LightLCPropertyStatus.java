@@ -72,11 +72,11 @@ public final class LightLCPropertyStatus extends ApplicationStatusMessage implem
 
     @Override
     void parseStatusParameters() {
-        MeshLogger.verbose(TAG, "Received light lc mode status from: " + MeshAddress.formatAddress(mMessage.getSrc(), true));
+        MeshLogger.verbose(TAG, "Received light lc property status from: " + MeshAddress.formatAddress(mMessage.getSrc(), true));
         final ByteBuffer buffer = ByteBuffer.wrap(mParameters).order(ByteOrder.LITTLE_ENDIAN);
         property = DeviceProperty.from(buffer.getShort());
         final byte[] value = new byte[mParameters.length - 2];
-        buffer.get(value, 2, value.length);
+        buffer.get(value, 0, value.length);
         characteristic = DeviceProperty.getCharacteristic(property, value, 0, value.length);
     }
 

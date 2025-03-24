@@ -101,7 +101,7 @@ public class SigModelParser {
     private static final short LIGHT_XYL_SERVER = 0x130C;
     private static final short LIGHT_XYL_SETUP_SERVER = 0x130D;
     private static final short LIGHT_XYL_CLIENT = 0x130E;
-    private static final short LIGHT_LC_SERVER = 0x130F;
+    public static final short LIGHT_LC_SERVER = 0x130F;
     private static final short LIGHT_LC_SETUP_SERVER = 0x1310;
     private static final short LIGHT_LC_CLIENT = 0x1311;
 

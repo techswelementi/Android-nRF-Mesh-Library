@@ -689,4 +689,12 @@
     <string name="message_public_key">Enter the 128-character hexadecimal Public Key of the device.</string>
     <string name="skip">skip</string>
     <string name="skip_oob_public_key_summary">Skipping this process will mark the provisioned node and any Network Key associated with this node as insecure.</string>
+    <string name="title_light_lc_server_controls">Light LC Server Controls</string>
+    <string name="light_lc_server_time_on">Time On</string>
+    <string name="light_lc_server_time_prolong">Time Prolong</string>
+    <string name="light_lc_server_dimm_on">Dimm On</string>
+    <string name="light_lc_server_dimm_prolong">Dimm Prolong</string>
+    <string name="light_lc_server_dimm_standby">Dimm Standby</string>
+    <string name="light_lc_server_mode">Mode</string>
+    <string name="action_light_lc_server_get_mode">GET MODE</string>
 </resources>

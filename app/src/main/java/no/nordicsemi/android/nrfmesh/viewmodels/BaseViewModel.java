@@ -29,6 +29,7 @@ import no.nordicsemi.android.nrfmesh.node.ConfigurationServerActivity;
 import no.nordicsemi.android.nrfmesh.node.GenericLevelServerActivity;
 import no.nordicsemi.android.nrfmesh.node.GenericModelConfigurationActivity;
 import no.nordicsemi.android.nrfmesh.node.GenericOnOffServerActivity;
+import no.nordicsemi.android.nrfmesh.node.LightLcServerActivity;
 import no.nordicsemi.android.nrfmesh.node.SceneServerModelActivity;
 import no.nordicsemi.android.nrfmesh.node.SceneSetupServerModelActivity;
 import no.nordicsemi.android.nrfmesh.node.SensorServerActivity;
@@ -42,6 +43,7 @@ import static no.nordicsemi.android.mesh.models.SigModelParser.GENERIC_ON_OFF_SE
 import static no.nordicsemi.android.mesh.models.SigModelParser.SCENE_SERVER;
 import static no.nordicsemi.android.mesh.models.SigModelParser.SCENE_SETUP_SERVER;
 import static no.nordicsemi.android.mesh.models.SigModelParser.SENSOR_SERVER;
+import static no.nordicsemi.android.mesh.models.SigModelParser.LIGHT_LC_SERVER;
 
 /**
  * abstract base class for ViewModels
@@ -126,6 +128,8 @@ public abstract class BaseViewModel extends ViewModel {
             intent = new Intent(context, SceneSetupServerModelActivity.class);
         } else if (model.getModelId() == SENSOR_SERVER) {
             intent = new Intent(context, SensorServerActivity.class);
+        } else if (model.getModelId() == LIGHT_LC_SERVER) {
+            intent = new Intent(context, LightLcServerActivity.class);
         } else if (model instanceof VendorModel) {
             intent = new Intent(context, VendorModelActivity.class);
         } else {

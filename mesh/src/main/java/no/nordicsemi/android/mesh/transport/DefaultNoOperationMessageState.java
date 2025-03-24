@@ -183,6 +183,10 @@ class DefaultNoOperationMessageState extends MeshMessageState {
                     final TimeStatus timeStatus = new TimeStatus(message);
                     mInternalTransportCallbacks.updateMeshNetwork(timeStatus);
                     mMeshStatusCallbacks.onMeshMessageReceived(message.getSrc(), timeStatus);
+                } else if (message.getOpCode() == ApplicationMessageOpCodes.LIGHT_LC_PROPERTY_STATUS) {
+                    final LightLCPropertyStatus status = new LightLCPropertyStatus(message);
+                    mInternalTransportCallbacks.updateMeshNetwork(status);
+                    mMeshStatusCallbacks.onMeshMessageReceived(message.getSrc(), status);
                 } else {
                     handleUnknownPdu(message);
                 }
@@ -484,10 +488,6 @@ class DefaultNoOperationMessageState extends MeshMessageState {
                     final LightLCLightOnOffStatus lightLcLightOnOffStatus = new LightLCLightOnOffStatus(message);
                     mInternalTransportCallbacks.updateMeshNetwork(lightLcLightOnOffStatus);
                     mMeshStatusCallbacks.onMeshMessageReceived(message.getSrc(), lightLcLightOnOffStatus);
-                } else if (message.getOpCode() == ApplicationMessageOpCodes.LIGHT_LC_PROPERTY_STATUS) {
-                    final LightLCPropertyStatus status = new LightLCPropertyStatus(message);
-                    mInternalTransportCallbacks.updateMeshNetwork(status);
-                    mMeshStatusCallbacks.onMeshMessageReceived(message.getSrc(), status);
                 } else if (message.getOpCode() == ApplicationMessageOpCodes.SCENE_REGISTER_STATUS) {
                     if (mMeshMessage instanceof SceneRegisterGet) {
                         final SceneRegisterStatus status = new SceneRegisterStatus(message);

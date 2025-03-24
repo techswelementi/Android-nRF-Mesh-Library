@@ -43,7 +43,8 @@ public class TimeMillisecond24 extends DevicePropertyCharacteristic<Float> {
 
     @Override
     public byte[] getBytes() {
-        return MeshParserUtils.convertIntTo24Bits((int) (value * 1000));
+        byte[] payload = MeshParserUtils.convertIntTo24Bits((int) (value * 1000));
+        return new byte[]{payload[2], payload[1], payload[0]};
     }
 
 }
