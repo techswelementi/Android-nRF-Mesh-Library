@@ -59,36 +59,36 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="116dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginEnd="113dp"
                     android:padding="@dimen/item_padding_end"
                     android:text="@string/action_read"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/time_on_slider" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/action_write_time_on"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="116dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginEnd="15dp"
                     android:padding="@dimen/item_padding_end"
                     android:text="@string/action_save"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/time_on_slider" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/action_write_time_prolong"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="283dp"
+                    android:layout_marginTop="11dp"
                     android:layout_marginEnd="15dp"
                     android:padding="@dimen/item_padding_end"
                     android:text="@string/action_save"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/time_prolong_slider" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/time_prolong"
@@ -112,15 +112,13 @@
                     android:id="@+id/time_prolong_slider"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:layout_marginEnd="32dp"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
                     app:labelBehavior="gone"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/time_on_slider"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/time_on_slider"
                     app:layout_constraintTop_toBottomOf="@id/time_prolong_label"
                     app:layout_constraintVertical_bias="0.0" />
 
@@ -129,12 +127,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="283dp"
+                    android:layout_marginTop="11dp"
                     android:layout_marginEnd="113dp"
                     android:padding="@dimen/item_padding_end"
                     android:text="@string/action_read"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/time_prolong_slider" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/time_on_label"
